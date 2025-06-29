@@ -1,0 +1,132 @@
+:root {
+  --blue-600: hsl(231, 69%, 60%);
+  --red-400: hsl(0, 94%, 66%);
+  --grey-50: hsl(0, 0%, 97%);
+  --blue-950: hsl(229, 31%, 21%);
+}
+
+.btn {
+  padding: 10px 35px;
+  background-color: var(--red-400);
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  border-radius: 7px;
+  border: 2.5px solid var(--red-400);
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: var(--grey-50);
+  color: var(--red-400);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero-img, .feature-img {
+  position: relative;
+}
+.hero-img::before, .feature-img::before {
+  content: "";
+  position: absolute;
+  right: -60%;
+  bottom: -40%;
+  background-color: var(--blue-600);
+  contain: "";
+  width: 130%;
+  height: 120%;
+}
+
+.feature-img::before {
+  width: 160%;
+  height: 350px;
+  bottom: -20%;
+  left: -60%;
+  z-index: -1;
+}
+
+.tab {
+  position: relative;
+}
+.tab::before {
+  content: "";
+  position: absolute;
+  transition: 0.5s;
+  bottom: -160%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 4px;
+  background-color: var(--red-400);
+  opacity: 0;
+}
+.tab.active::before {
+  opacity: 1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.main-heading {
+  opacity: 0;
+  animation: text-show 0.3s 0.5s forwards linear;
+}
+
+.sub-heading {
+  opacity: 0;
+  animation: text-show 0.3s 0.8s forwards linear;
+}
+
+.btns {
+  opacity: 0;
+  animation: text-show 0.3s 1.2s forwards linear;
+}
+
+.hero-img {
+  opacity: 0;
+  animation: text-show 0.3s 1.4s forwards linear;
+}
+
+.feature-heading {
+  animation: 0.3s 1.4s forwards linear;
+}
+
+@keyframes text-show {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+    filter: blur(5px);
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+    visibility: visible;
+  }
+}
+.animate {
+  animation: text-show 0.5s ease-in-out forwards;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.animate-delay-0 {
+  animation-delay: 0s;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.6s;
+}/*# sourceMappingURL=main.css.map */

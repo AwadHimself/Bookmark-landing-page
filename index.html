@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Bookmark landing page</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <div class="nav-bar container justify-self-center py-15 px-30 flex justify-between items-center h-[175px]">
+    <div class="logo">
+      <img src="images/logo-bookmark.svg" alt="">
+    </div>
+    <div class=" flex gap-7 items-center">
+      <ul class="links flex gap-7 items-center text-[var(--blue-950)]">
+        <li class="cursor-pointer hover:text-[var(--red-400)]">FEATURES</li>
+        <li class="cursor-pointer hover:text-[var(--red-400)]">PRICING</li>
+        <li class="cursor-pointer hover:text-[var(--red-400)]">CONTACT</li>
+      </ul> 
+      <button class="btn shadow-lg/15 h-[40px] text-center">LOGIN</button>
+    </div>
+  </div>
+
+  <div class=" hero mt-20 mb-20">
+    <div class=" container justify-self-center px-30 flex justify-between items-center">
+      <div class="max-w-[46%] flex flex-col gap-7">
+        <p class="main-heading text-5xl font-medium text-[var(--blue-950)] ">A Simple Bookmark Manager</p>
+        <p class="sub-heading text-stone-400 leading-[1.5]">
+          A clean and simple interface to organize your favourite websites.
+          Open a new browser tab and see your sites load instantly.
+          Try it for free.
+        </p>
+        <div class="btns flex items-center gap-3">
+          <button class="btn bg-[var(--blue-600)]! border-[var(--blue-600)]! hover:bg-[var(--grey-50)]! hover:text-[var(--blue-600)]!">Get it on Chrome</button>
+          <button class="btn bg-[var(--grey-50)]! text-[var(--blue-950)]! border-[var(--grey-50)]! hover:bg-white! hover:border-[var(--blue-950)]! ">Get it on Firefox</button>
+        </div>
+      </div>
+      <div class="max-w-[40%] hero-img before:rounded-l-full">
+        <img class=" scale-[1.4]" src="images/illustration-hero.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="features container justify-self-center px-30 mt-50 flex flex-col gap-25">
+    <div class="flex flex-col gap-5 text-center justify-center items-center">
+      <p class="text-4xl font-medium text-[var(--blue-950)]">Features</p>
+      <p class="max-w-[62%] leading-[1.8] text-stone-400 text-lg"> 
+        Our aim is to make it quick and easy for you to access your favourite websites. 
+        Your bookmarks sync between your devices so you can access them on the go.
+      </p>
+    </div>
+    <div class="slider flex flex-col gap-25 ">
+      <div class="slider-tabs flex justify-between items-center  mx-40 px-10 pb-7 border-b-[.5px] border-b-stone-300">
+        <p data-num="1" class="tab font-medium text-[var(--blue-950)] cursor-pointer hover:text-[var(--red-400)]  active">Simple Bookmarking</p>
+        <p data-num="2" class="tab font-medium text-[var(--blue-950)] cursor-pointer hover:text-[var(--red-400)]  ">Speedy Searching</p>
+        <p data-num="3" class="tab font-medium text-[var(--blue-950)] cursor-pointer hover:text-[var(--red-400)]  ">Easy Sharing</p>
+      </div>
+      <div class="slider-content flex items-center justify-between">
+        <div class="feature-img max-w-[45%] before:rounded-r-full w-[570px] h-[370px] ">
+          <img class="scale-[1.1] translate-x-[40px]" src="images/illustration-features-tab-1.svg" alt="">
+        </div>
+        <div class="max-w-[40%] flex flex-col gap-7 items-start">
+          <p class="feature-heading text-3xl font-medium text-[var(--blue-950)]"></p>
+          <p class="feature-subheading leading-[1.8] h-[115px] text-stone-400 text-md">
+          </p>
+          <button class="btn bg-[var(--blue-600)]! border-[var(--blue-600)]! hover:bg-[var(--grey-50)]! hover:text-[var(--blue-600)]!">More info</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+  <!-- 
+
+  
+
+
+
+  More Info
+
+  Download the extension
+
+  We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+  got a favourite you’d like us to prioritize.
+
+  Add to Chrome
+  Minimum version 62
+  Add & Install Extension
+
+  Add to Firefox
+  Minimum version 55
+  Add & Install Extension
+
+  Add to Opera
+  Minimum version 46
+  Add & Install Extension
+
+  Frequently Asked Questions
+  
+  Here are some of our FAQs. If you have any other questions you’d like 
+  answered please feel free to email us.
+
+  Question 1
+  What is Bookmark?
+
+  Answer 1
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+  justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+
+  Question 2
+  How can I request a new browser?
+
+  Answer 2
+  Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+  Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+  ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+  Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+
+  Question 3
+  Is there a mobile app?
+
+  Answer 3
+  Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+  urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+  sollicitudin ex et ultricies bibendum.
+
+  Question 4
+  What about other Chromium browsers?
+
+  Answer 4
+  Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+  vitae neque eget nisl gravida pellentesque non ut velit.
+
+  More Info
+
+  35,000+ already joined
+
+  Stay up-to-date with what we’re doing
+
+  Contact Us
+
+  Features
+  Pricing
+  Contact
+   -->
