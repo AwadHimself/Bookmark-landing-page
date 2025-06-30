@@ -132,3 +132,92 @@ body{
 .animate-delay-2 {
   animation-delay: 0.6s;
 }
+
+
+
+.extension-wrapper{
+    position: relative;
+    transition: .3s;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 75%;
+        width: 100%;
+        height: 3px;
+        border-bottom: 3px solid  ;
+        border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='2'%3E%3Ccircle cx='1' cy='1' r='1' fill='rgb(173, 173, 173)' /%3E%3C/svg%3E") 1 repeat;
+    }
+    &:nth-child(2){
+        transform: translateY(50px);
+    }
+    &:nth-child(3){
+        transform: translateY(100px);
+    }
+    &:hover{
+        transform: translateY(-20px);
+    }
+}
+
+
+.q{
+    border-bottom: 1px solid rgb(133, 133, 133);
+    cursor: pointer;
+    .arrow{
+            transition: .3s;
+            transform: rotate(0deg);
+        }
+    .answer{
+        overflow: hidden;
+        height: 0;
+        transition: .3s;
+    }
+    &.open{
+        .arrow{
+            transition: .3s;
+            transform: rotate(180deg);
+        }
+        .answer{
+            height: 150px;
+        }
+    }
+    &:hover{
+        .q-label{
+            color: var(--red-400);
+        }
+    }
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+.input-fel{
+    transition: .3s;
+    span{
+        opacity: 0;
+        transition: .3s;
+    }
+    img{
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: .3s;
+    }
+    &.error{
+        border : 2px solid var(--red-400);
+        img{
+            opacity: 1;
+        }
+        span{
+            opacity: 1;
+        }
+    }
+}
+
+.error{
+
+}

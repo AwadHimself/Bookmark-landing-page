@@ -129,4 +129,82 @@ body {
 
 .animate-delay-2 {
   animation-delay: 0.6s;
+}
+
+.extension-wrapper {
+  position: relative;
+  transition: 0.3s;
+}
+.extension-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 75%;
+  width: 100%;
+  height: 3px;
+  border-bottom: 3px solid;
+  -o-border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='2'%3E%3Ccircle cx='1' cy='1' r='1' fill='rgb(173, 173, 173)' /%3E%3C/svg%3E") 1 repeat;
+     border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='2'%3E%3Ccircle cx='1' cy='1' r='1' fill='rgb(173, 173, 173)' /%3E%3C/svg%3E") 1 repeat;
+}
+.extension-wrapper:nth-child(2) {
+  transform: translateY(50px);
+}
+.extension-wrapper:nth-child(3) {
+  transform: translateY(100px);
+}
+.extension-wrapper:hover {
+  transform: translateY(-20px);
+}
+
+.q {
+  border-bottom: 1px solid rgb(133, 133, 133);
+  cursor: pointer;
+}
+.q .arrow {
+  transition: 0.3s;
+  transform: rotate(0deg);
+}
+.q .answer {
+  overflow: hidden;
+  height: 0;
+  transition: 0.3s;
+}
+.q.open .arrow {
+  transition: 0.3s;
+  transform: rotate(180deg);
+}
+.q.open .answer {
+  height: 150px;
+}
+.q:hover .q-label {
+  color: var(--red-400);
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+.input-fel {
+  transition: 0.3s;
+}
+.input-fel span {
+  opacity: 0;
+  transition: 0.3s;
+}
+.input-fel img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.input-fel.error {
+  border: 2px solid var(--red-400);
+}
+.input-fel.error img {
+  opacity: 1;
+}
+.input-fel.error span {
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */

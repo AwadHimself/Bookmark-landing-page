@@ -49,6 +49,30 @@ sliderTabs.forEach(tab => {
         featureHeading.textContent = features[index].heading;
         featureSubheading.textContent = features[index].subheading;
         featureImg.src = features[index].mockup;
-         animateFeatureElements();
+        animateFeatureElements();
     })
+});
+
+
+const faqTabs = document.querySelectorAll('.q');
+faqTabs.forEach(tab => {
+    tab.addEventListener('click' , ()=>{
+        tab.classList.toggle('open');
+    })
+});
+
+
+
+function validateEmail(email) {
+  const regex = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+  return regex.test(email);
+}
+
+const btn = document.querySelector('.contact_us');
+
+const textFieldDiv = document.querySelector('.input-fel');
+const textField = document.getElementById('email');
+
+btn.addEventListener('click' , ()=>{
+    validateEmail(textField.value)? textFieldDiv.classList.remove('error') : textFieldDiv.classList.add('error');
 });
