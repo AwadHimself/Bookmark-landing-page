@@ -76,3 +76,12 @@ const textField = document.getElementById('email');
 btn.addEventListener('click' , ()=>{
     validateEmail(textField.value)? textFieldDiv.classList.remove('error') : textFieldDiv.classList.add('error');
 });
+
+//navbar 
+const menu = document.querySelector('.menu');
+const links = document.querySelector('.nav-links');
+
+menu.addEventListener('click' , ()=>{
+    links.classList.toggle('hidden');
+    links.classList.contains('hidden') ? menu.src = 'images/icon-hamburger.svg' : menu.src = 'images/icon-close.svg'
+})
